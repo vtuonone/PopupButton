@@ -20,13 +20,44 @@
 		<vaadin.version>8.1.6</vaadin.version>
 		<vaadin.plugin.version>${vaadin.version}</vaadin.plugin.version>
 		<Vaadin-License-Title>Apache License 2.0</Vaadin-License-Title>
-		
+
 		<maven-release-plugin.version>2.5.3</maven-release-plugin.version>
 	</properties>
 
 	<organization>
 		<name>org.vaadin.hene</name>
 	</organization>
+
+	<scm>
+		<developerConnection>scm:git:git@github.com:FOCONIS/suggestfield.git</developerConnection>
+		<tag>HEAD</tag>
+	</scm>
+
+	<distributionManagement>
+		<repository>
+			<id>suggestfield-release</id>
+			<name>Foconis Release Repository</name>
+			<url>sftp://bamboo@repo.foconis.de/var/www/html/repo/maven-release/</url>
+		</repository>
+		<snapshotRepository>
+			<id>suggestfield-snapshot</id>
+			<name>Foconis Snapshot Repository</name>
+			<url>sftp://bamboo@repo.foconis.de/var/www/html/repo/maven-snapshot/</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+	<licenses>
+		<license>
+			<name>Apache 2</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<modules>
+		<module>addon</module>
+		<module>demo</module>
+	</modules>
 
 	<dependencyManagement>
 		<dependencies>
@@ -42,11 +73,6 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-
-	<modules>
-		<module>addon</module>
-		<module>demo</module>
-	</modules>
 
 	<build>
 		<plugins>
