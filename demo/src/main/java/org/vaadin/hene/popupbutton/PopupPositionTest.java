@@ -9,6 +9,8 @@ import com.vaadin.ui.*;
  */
 public class PopupPositionTest extends VerticalLayout implements View {
 
+    private static final long serialVersionUID = 1L;
+
     public PopupPositionTest() {
 
         CssLayout cssLayout = new CssLayout();
@@ -28,6 +30,8 @@ public class PopupPositionTest extends VerticalLayout implements View {
     }
 
     class MyPopupButton extends PopupButton {
+
+        private static final long serialVersionUID = 1L;
 
         public MyPopupButton(Component c) {
             setPopupPositionComponent(c);

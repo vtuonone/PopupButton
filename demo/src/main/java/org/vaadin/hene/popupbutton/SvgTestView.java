@@ -11,6 +11,7 @@ import com.vaadin.ui.VerticalLayout;
  */
 public class SvgTestView extends VerticalLayout implements View {
 
+    private static final long serialVersionUID = 1L;
 
     public SvgTestView() {
 

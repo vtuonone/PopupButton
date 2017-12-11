@@ -13,6 +13,8 @@ import com.vaadin.ui.VerticalLayout;
  */
 public class ShortcutActionTestView extends VerticalLayout implements View {
 
+    private static final long serialVersionUID = 1L;
+
     public ShortcutActionTestView() {
         PopupButton popupButton = new PopupButton("Click me!");
         addComponent(popupButton);

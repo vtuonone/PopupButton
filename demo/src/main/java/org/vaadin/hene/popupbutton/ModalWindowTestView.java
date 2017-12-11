@@ -11,6 +11,8 @@ import com.vaadin.ui.Window;
  */
 public class ModalWindowTestView extends VerticalLayout implements View {
 
+    private static final long serialVersionUID = 1L;
+
     public ModalWindowTestView() {
 
         final PopupButton popupButton = new PopupButton("Click me!");

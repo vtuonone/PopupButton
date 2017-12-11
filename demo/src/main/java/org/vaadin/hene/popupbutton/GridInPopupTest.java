@@ -10,6 +10,8 @@ import com.vaadin.ui.VerticalLayout;
  */
 public class GridInPopupTest extends VerticalLayout implements View {
 
+    private static final long serialVersionUID = 1L;
+
     public GridInPopupTest() {
 
         // No client-side exceptions should be seen in the debug window
@@ -17,7 +19,7 @@ public class GridInPopupTest extends VerticalLayout implements View {
 
         PopupButton popupButton = new PopupButton("Click me!");
 
-        Grid grid = new Grid();
+        Grid<String> grid = new Grid<>();
         popupButton.setContent(grid);
 
         addComponent(popupButton);

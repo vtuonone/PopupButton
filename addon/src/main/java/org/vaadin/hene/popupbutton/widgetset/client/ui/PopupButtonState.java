@@ -6,6 +6,8 @@ import com.vaadin.shared.ui.button.ButtonState;
 
 public class PopupButtonState extends ButtonState {
 
+    private static final long serialVersionUID = 1L;
+    
     public boolean popupVisible;
     public Connector popupPositionConnector;
 

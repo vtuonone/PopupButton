@@ -69,6 +69,8 @@ public class VPopupButton extends VButton {
         Scheduler.get().scheduleDeferred(new ScheduledCommand() {
 
             public void execute() {
+                int realPos = 0;
+                
                 if (position.equals("auto")) {
                     int extra = 20;
 
@@ -84,17 +86,23 @@ public class VPopupButton extends VButton {
                             + Window.getScrollLeft();
                     int browserWindowHeight = Window.getClientHeight()
                             + Window.getScrollTop();
+                    
+                    
                     if (left + popup.getOffsetWidth() > browserWindowWidth
                             - extra) {
                         left = getPopupPositionWidget().getAbsoluteLeft()
                                 - (popup.getOffsetWidth() - getPopupPositionWidget()
                                 .getOffsetWidth());
+                        realPos+=1;
                     }
+                    
                     if (top + popup.getOffsetHeight() > browserWindowHeight
                             - extra) {
                         top = getPopupPositionWidget().getAbsoluteTop()
                                 - popup.getOffsetHeight() - 2;
+                        realPos+=2;
                     }
+                    
                     left = left + xOffset;
                     if (left < 0) {
                         left = 0;
@@ -112,16 +120,21 @@ public class VPopupButton extends VButton {
                     int browserWindowWidth = Window.getClientWidth()
                             + Window.getScrollLeft();
                     int clientHeight = Window.getClientHeight();
+                   
                     if (left + popup.getOffsetWidth() > browserWindowWidth
                             - extra) {
                         left = getPopupPositionWidget().getAbsoluteLeft()
                                 - (popup.getOffsetWidth() - getPopupPositionWidget()
                                 .getOffsetWidth());
+                        realPos+=1;
                     }
+                    
                     if (top + popup.getOffsetHeight() > clientHeight - extra) {
                         top = (getPopupPositionWidget().getAbsoluteTop() - Window
                                 .getScrollTop()) - popup.getOffsetHeight() - 2;
+                        realPos+=2;
                     }
+                    
                     left = left + xOffset;
                     if (left < 0) {
                         left = 0;
@@ -129,6 +142,16 @@ public class VPopupButton extends VButton {
                     popup.setPopupPosition(left, top + yOffset);
                     popup.addStyleName("fixed");
                     popup.setVisible(true);
+                }
+                
+                if (realPos == 0) {
+                  popup.addStyleName("posRightBottom");
+                } else if (realPos == 1) {
+                  popup.addStyleName("posLeftBottom");
+                } else if (realPos == 2) {
+                  popup.addStyleName("posRightTop");
+                } else if (realPos == 3) {
+                  popup.addStyleName("posLeftTop");
                 }
             }
         });

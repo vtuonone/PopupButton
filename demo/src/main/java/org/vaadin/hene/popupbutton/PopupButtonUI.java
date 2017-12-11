@@ -5,9 +5,10 @@ import com.vaadin.navigator.Navigator;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.ui.*;
 
-@SuppressWarnings("serial")
 @Title("PopupButton Application")
 public class PopupButtonUI extends UI {
+
+    private static final long serialVersionUID = 1L;
 
     @Override
     protected void init(VaadinRequest request) {

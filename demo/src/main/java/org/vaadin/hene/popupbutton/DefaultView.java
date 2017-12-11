@@ -16,6 +16,8 @@ import java.util.List;
  */
 public class DefaultView extends GridLayout implements View {
 
+    private static final long serialVersionUID = 1L;
+    
     private List<PopupButton> popupButtons = new ArrayList<>();
 
     public DefaultView() {
@@ -92,7 +94,7 @@ public class DefaultView extends GridLayout implements View {
 
         PopupButton comboBoxButton = new PopupButton("ComboBox in Popup");
         popupButtons.add(comboBoxButton);
-        ComboBox cb = new ComboBox();
+        ComboBox<String> cb = new ComboBox<>();
         cb.setItems("Item 1", "Item 2");
         cb.setPlaceholder("ComboBox");
         comboBoxButton.setContent(cb);
@@ -100,7 +102,7 @@ public class DefaultView extends GridLayout implements View {
 
         PopupButton tableButton = new PopupButton("Grid in Popup");
         popupButtons.add(tableButton);
-        Grid grid = new Grid();
+        Grid<String> grid = new Grid<>();
         grid.setHeight("200px");
         grid.addColumn(o -> "").setCaption("property1");
         grid.addColumn(o -> "").setCaption("property2");

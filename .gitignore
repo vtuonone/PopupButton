@@ -1,8 +1,53 @@
-.classpath
-.project
-.settings
 build
 WebContent/VAADIN/widgetsets
-target
+demo/src/main/webapp/VAADIN/widgetsets/
 .idea
 .idea_modules
+*.class
+*.iml
+*.releaseBackup
+*.cache
+.factorypath
+.classpath
+.project
+.mvn/
+git.properties
+
+# ignore the CREATE and DROP sql scripts
+*-create-all.sql
+*-drop-all.sql
+
+# ignore all temporary H2 database files
+*.db
+
+#exclude all build directories
+target
+target-ide
+bin
+
+.webcache
+
+# never commit log files
+logs/
+log/
+*.log
+
+.idea
+
+# eclipse settings von den Projekten
+.settings/*
+#Ausnahmen von den Ausnahmen
+!.settings/org.eclipse.jdt.core.prefs
+!.settings/org.eclipse.jdt.ui.prefs
+!.settings/edu.umd.cs.findbugs.core.prefs
+!.settings/sf.eclipse.javacc.prefs
+
+*/.settings/*
+#Ausnahmen von den Ausnahmen
+!*/.settings/org.eclipse.jdt.core.prefs
+!*/.settings/org.eclipse.jdt.ui.prefs
+!*/.settings/edu.umd.cs.findbugs.core.prefs
+!*/.settings/sf.eclipse.javacc.prefs
+
+/.apt_generated/
+styles.css
