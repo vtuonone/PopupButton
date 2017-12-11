@@ -29,7 +29,7 @@
 	</organization>
 
 	<scm>
-		<developerConnection>scm:git:git@github.com:FOCONIS/suggestfield.git</developerConnection>
+		<developerConnection>scm:git:git@github.com:FOCONIS/PopupButton.git</developerConnection>
 		<tag>HEAD</tag>
 	</scm>
 
