@@ -10,8 +10,8 @@
 
 	<artifactId>popupbutton-demo</artifactId>
 
-	<name>popupbutton-demo</name>
-	<description>popupbutton-demo</description>
+	<name>PopupButton Demo</name>
+	<description>PopupButton Demo Project</description>
 
 	<packaging>war</packaging>
 

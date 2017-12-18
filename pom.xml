@@ -7,8 +7,8 @@
 	<artifactId>popupbutton-root</artifactId>
 	<version>3.0.0-FOC2-SNAPSHOT</version>
 
-	<name>PopupButton</name>
-	<description>PopupButton</description>
+	<name>PopupButton Aggregator</name>
+	<description>PopupButton - Maven aggregator</description>
 
 	<packaging>pom</packaging>
 
