@@ -11,7 +11,7 @@
 	<artifactId>popupbutton</artifactId>
 
 	<description>PopupButton</description>
-	<name>PopupButton - Addon</name>
+	<name>PopupButton Addon</name>
 
 	<packaging>jar</packaging>
 
@@ -43,7 +43,18 @@
 		</dependency>
 		<dependency>
 			<groupId>com.vaadin</groupId>
+			<artifactId>vaadin-shared</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.google.gwt</groupId>
+			<artifactId>gwt-user</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.vaadin</groupId>
 			<artifactId>vaadin-client</artifactId>
+			<scope>provided</scope>
 		</dependency>
 	</dependencies>
 
