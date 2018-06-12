@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.vaadin.hene</groupId>
 		<artifactId>popupbutton-root</artifactId>
-		<version>3.0.0-FOC8</version>
+		<version>3.0.0-FOC9-SNAPSHOT</version>
 	</parent>
 
 	<artifactId>popupbutton</artifactId>
