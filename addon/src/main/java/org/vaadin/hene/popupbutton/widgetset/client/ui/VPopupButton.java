@@ -103,12 +103,27 @@ public class VPopupButton extends VButton {
                         realPos+=2;
                     }
                     
+                    if (top < 0) {
+                        top = (getPopupPositionWidget().getAbsoluteTop() 
+                            + getPopupPositionWidget().getOffsetHeight() / 2)
+                                - popup.getOffsetHeight() / 2;
+                        realPos+=2;
+                        
+                        if (realPos % 2 == 0) {
+                          left += getPopupPositionWidget().getOffsetWidth() + 2;
+                        } else {
+                          left -= getPopupPositionWidget().getOffsetWidth() + 2;
+                        }
+                    }
+                   
                     left = left + xOffset;
                     if (left < 0) {
                         left = 0;
                     }
+                    
                     popup.setPopupPosition(left, top + yOffset);
                     popup.setVisible(true);
+                    
                 } else if (position.equals("fixed")) {
                     int extra = 20;
 
@@ -152,6 +167,10 @@ public class VPopupButton extends VButton {
                   popup.addStyleName("posRightTop");
                 } else if (realPos == 3) {
                   popup.addStyleName("posLeftTop");
+                } else if (realPos == 4) {
+                  popup.addStyleName("posRightCenter");
+                } else if (realPos == 5) {
+                  popup.addStyleName("posLeftCenter");
                 }
             }
         });

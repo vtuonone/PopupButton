@@ -132,9 +132,10 @@ public class DefaultView extends GridLayout implements View {
         horizontalLayout.addComponent(noContentPopupButton);
 
         Alignment[] aligns = new Alignment[] { Alignment.TOP_RIGHT,
+            Alignment.MIDDLE_LEFT, Alignment.MIDDLE_RIGHT,
                 Alignment.BOTTOM_LEFT, Alignment.BOTTOM_RIGHT };
         for (Alignment align : aligns) {
-            PopupButton b2 = createPopupButton();
+            PopupButton b2 = createLongListPopupButton();
             addComponent(b2);
             setComponentAlignment(b2, align);
         }
@@ -144,7 +145,7 @@ public class DefaultView extends GridLayout implements View {
         PopupButton popupButton = new PopupButton("Add");
         popupButtons.add(popupButton);
         popupButton.setIcon(VaadinIcons.PLUS_CIRCLE_O);
-
+        
         GridLayout gl = new GridLayout(3, 3);
         gl.addComponent(createIconButton(VaadinIcons.FILE_CODE));
         gl.addComponent(createIconButton(VaadinIcons.FILE_FONT));
@@ -160,6 +161,25 @@ public class DefaultView extends GridLayout implements View {
         return popupButton;
     }
 
+    private PopupButton createLongListPopupButton() {
+      PopupButton popupButton = new PopupButton("Add");
+      popupButtons.add(popupButton);
+      popupButton.setIcon(VaadinIcons.PLUS_CIRCLE_O);
+
+      CssLayout listLayout = new CssLayout();
+      listLayout.setWidth("200px");
+      
+      for (int i = 0; i < 30; i++) {
+        Label label = new Label();
+        label.setWidth("200px");
+        label.setValue("Item " + i);
+        listLayout.addComponent(label);
+      }
+
+      popupButton.setContent(listLayout);
+      return popupButton;
+    }
+    
     private Button createIconButton(Resource icon) {
         Button b = new Button();
         b.setIcon(icon);
