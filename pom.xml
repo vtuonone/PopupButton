@@ -34,14 +34,14 @@
 
 	<distributionManagement>
 		<repository>
-			<id>suggestfield-release</id>
+			<id>foconis-release</id>
 			<name>Foconis Release Repository</name>
-			<url>sftp://bamboo@repo.foconis.de/var/www/html/repo/maven-release/</url>
+			<url>https://mvnrepo.foconis.de/repository/release/</url>
 		</repository>
 		<snapshotRepository>
-			<id>suggestfield-snapshot</id>
+			<id>foconis-snapshot</id>
 			<name>Foconis Snapshot Repository</name>
-			<url>sftp://bamboo@repo.foconis.de/var/www/html/repo/maven-snapshot/</url>
+			<url>https://mvnrepo.foconis.de/repository/snapshot/</url>
 		</snapshotRepository>
 	</distributionManagement>
 
