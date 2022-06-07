@@ -11,5 +11,5 @@ updates:
       interval: "daily"
     ignore:
       # ignore major Vaadin updates
-      - dependency-name: "com.vaadin"
+      - dependency-name: "com.vaadin:*"
         update-types: [ "version-update:semver-major" ]
