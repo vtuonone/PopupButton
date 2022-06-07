@@ -12,4 +12,4 @@ updates:
     ignore:
       # ignore major Vaadin updates
       - dependency-name: "com.vaadin"
-        update-types: [ "major" ]
+        update-types: [ "version-update:semver-major" ]
