@@ -9,3 +9,7 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "daily"
+    ignore:
+      # ignore major Vaadin updates
+      - dependency-name: "com.vaadin"
+        update-types: [ "major" ]
