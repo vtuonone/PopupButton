@@ -9,7 +9,7 @@
 	</parent>
 	<groupId>org.vaadin.hene</groupId>
 	<artifactId>popupbutton-root</artifactId>
-	<version>3.0.0-FOC17</version>
+	<version>3.0.0-FOC18-SNAPSHOT</version>
 
 	<name>PopupButton Aggregator</name>
 	<description>PopupButton - Maven aggregator</description>
@@ -42,7 +42,7 @@
 
 	<scm>
 		<developerConnection>scm:git:git@github.com:FOCONIS/PopupButton.git</developerConnection>
-		<tag>popupbutton-root-3.0.0-FOC17</tag>
+		<tag>HEAD</tag>
 	</scm>
 
 	<distributionManagement>
