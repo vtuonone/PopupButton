@@ -9,13 +9,13 @@
 	</parent>
 	<groupId>org.vaadin.hene</groupId>
 	<artifactId>popupbutton-root</artifactId>
-	<version>3.0.0-FOC18-SNAPSHOT</version>
+	<version>3.0.0-LISTENER</version>
 
 	<name>PopupButton Aggregator</name>
 	<description>PopupButton - Maven aggregator</description>
 
 	<packaging>pom</packaging>
-	<url>https://github.com/FOCONIS/PopupButton</url>
+	<url>https://github.com/vtuonone/PopupButton</url>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
